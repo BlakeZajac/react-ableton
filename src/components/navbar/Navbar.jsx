@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+// import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "../../App.scss";
 import "./navbar.scss";
 
@@ -6,8 +7,8 @@ const Navbar = () => {
   const [toggleMoreMenu, setToggleMoreMenu] = useState(false);
 
   return (
-    <div className="navbar section">
-      <div className="navbar__container row">
+    <div className="navbar">
+      <div className="navbar__container">
         <div className="navbar__items">
           <div className="navbar__items__logo">
             <svg
@@ -26,39 +27,32 @@ const Navbar = () => {
 
           <ul className="navbar__items__list">
             <li className="navbar__items__list__item">
-              <a href="/">Live</a>
+              <a href="#">Live</a>
             </li>
-
             <li className="navbar__items__list__item">
-              <a href="/">Push</a>
+              <a href="#">Push</a>
             </li>
-
             <li className="navbar__items__list__item">
-              <a href="/">Note</a>
+              <a href="#">Note</a>
             </li>
-
             <li className="navbar__items__list__item">
-              <a href="/">Link</a>
+              <a href="#">Link</a>
             </li>
-
             <li className="navbar__items__list__item">
-              <a href="/">Shop</a>
+              <a href="#">Shop</a>
             </li>
-
             <li className="navbar__items__list__item">
-              <a href="/">Packs</a>
+              <a href="#">Packs</a>
             </li>
-
             <li className="navbar__items__list__item">
-              <a href="/">Help</a>
+              <a href="#">Help</a>
             </li>
-
             {/* More submenu */}
             <li className="navbar__items__list__item navbar__items__list__item__more">
               {toggleMoreMenu ? (
                 <div>
                   <a
-                    href="/"
+                    href="#"
                     className="color-orange"
                     onClick={() => setToggleMoreMenu(false)}
                   >
@@ -68,8 +62,8 @@ const Navbar = () => {
               ) : (
                 <div>
                   <a
-                    href="/"
-                    className="color-orange"
+                    href="#"
+                    className="color-orange is-open"
                     onClick={() => setToggleMoreMenu(true)}
                   >
                     More
@@ -80,33 +74,33 @@ const Navbar = () => {
 
                       <ul className="navbar__items__list">
                         <li className="navbar__items__list__item">
-                          <a href="/">Blog</a>
+                          <a href="#">Blog</a>
                         </li>
 
                         <li className="navbar__items__list__item">
-                          <a href="/">Ableton for the Classroom</a>
+                          <a href="#">Ableton for the Classroom</a>
                         </li>
 
                         <li className="navbar__items__list__item">
-                          <a href="/">Ableton for Colleges and Universities</a>
+                          <a href="#">Ableton for Colleges and Universities</a>
                         </li>
 
                         <li className="navbar__items__list__item">
-                          <a href="/">Certified Training</a>
+                          <a href="#">Certified Training</a>
                         </li>
 
                         <li className="navbar__items__list__item">
-                          <a href="/" className="color-orange">
+                          <a href="#" className="color-orange">
                             About Ableton
                           </a>
                         </li>
 
                         <li className="navbar__items__list__item">
-                          <a href="/">Jobs</a>
+                          <a href="#">Jobs</a>
                         </li>
 
                         <li className="navbar__items__list__item">
-                          <a href="/">Apprenticeships</a>
+                          <a href="#">Apprenticeships</a>
                         </li>
                       </ul>
                     </div>
@@ -115,8 +109,8 @@ const Navbar = () => {
                       <h4>More from Ableton</h4>
 
                       <ul className="navbar__items__list">
-                        <li className="navbar__items__list__item">
-                          <a href="/">
+                        <li className="navbar__items__list__item navbar__items__list__item__with-heading">
+                          <a href="#">
                             <p className="navbar__items__list__item__heading">
                               Loop
                             </p>
@@ -127,8 +121,8 @@ const Navbar = () => {
                           </a>
                         </li>
 
-                        <li className="navbar__items__list__item">
-                          <a href="/">
+                        <li className="navbar__items__list__item navbar__items__list__item__with-heading">
+                          <a href="#">
                             <p className="navbar__items__list__item__heading">
                               Learning Music
                             </p>
@@ -139,8 +133,8 @@ const Navbar = () => {
                           </a>
                         </li>
 
-                        <li className="navbar__items__list__item">
-                          <a href="/">
+                        <li className="navbar__items__list__item navbar__items__list__item__with-heading">
+                          <a href="#">
                             <p className="navbar__items__list__item__heading">
                               Learning Synths
                             </p>
@@ -151,8 +145,8 @@ const Navbar = () => {
                           </a>
                         </li>
 
-                        <li className="navbar__items__list__item">
-                          <a href="/">
+                        <li className="navbar__items__list__item navbar__items__list__item__with-heading">
+                          <a href="#">
                             <p className="navbar__items__list__item__heading">
                               Making Music
                             </p>
@@ -170,15 +164,16 @@ const Navbar = () => {
             </li>
             {/* End more submenu */}
 
-            <li className="navbar__items__list__item navbar__items__list__item__try">
-              <a href="/" className="color-blue">
-                Try Live for free
-              </a>
-            </li>
-
-            <li className="navbar__items__list__item navbar__items__list__item__login">
-              <a href="/">Log in or register</a>
-            </li>
+            <div className="navbar__items__list__right">
+              <li className="navbar__items__list__item navbar__items__list__item__try">
+                <a href="/" className="color-blue">
+                  Try Live for free
+                </a>
+              </li>
+              <li className="navbar__items__list__item navbar__items__list__item__login">
+                <a href="/">Log in or register</a>
+              </li>
+            </div>
           </ul>
 
           {/* Mobile menu */}
