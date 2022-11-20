@@ -86,6 +86,11 @@ code {
     monospace;
 }
 
+::selection {
+  background: $color-blue;
+  color: $color-white;
+}
+
 a {
   color: initial;
   text-decoration: none;
@@ -157,4 +162,8 @@ p {
   font-family: $font-light;
   line-height: 1.5;
   color: $color-grey;
+
+  @media all and (max-width: $breakpoint-tablet-sm) {
+    font-size: 1.125rem;
+  }
 }

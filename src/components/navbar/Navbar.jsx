@@ -15,7 +15,6 @@ const Navbar = () => {
             <svg
               role="img"
               aria-labelledby="logo"
-              class="main-nav__logo__image"
               xmlns="http://www.w3.org/2000/svg"
               width="45"
               height="21"
