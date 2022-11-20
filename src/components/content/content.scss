@@ -1,0 +1,15 @@
+@import "../../App.scss";
+
+.content {
+  padding: 4rem 0 !important;
+
+  &__container {
+    max-width: 800px !important;
+
+    h2 {
+      font-size: 1.75rem;
+      line-height: 1.4;
+      padding-bottom: 1.5rem;
+    }
+  }
+}

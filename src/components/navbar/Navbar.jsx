@@ -4,7 +4,8 @@ import "../../App.scss";
 import "./navbar.scss";
 
 const Navbar = () => {
-  const [toggleMoreMenu, setToggleMoreMenu] = useState(false);
+  const [toggleMoreMenu, setToggleMoreMenu] = useState(true);
+  const [toggleMobileMenu, setToggleMobileMenu] = useState(true);
 
   return (
     <div className="navbar">
@@ -177,6 +178,68 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile menu */}
+          <li className="navbar__mobile-menu">
+            {toggleMobileMenu ? (
+              <div>
+                <a
+                  href="#"
+                  className="color-black"
+                  onClick={() => setToggleMobileMenu(false)}
+                >
+                  Menu
+                </a>
+              </div>
+            ) : (
+              <div>
+                <a
+                  href="#"
+                  className="color-white menu-open"
+                  onClick={() => setToggleMobileMenu(true)}
+                >
+                  Menu
+                </a>
+                <div className="navbar__mobile-menu__menu">
+                  <ul className="navbar__items__list">
+                    <li className="navbar__items__list__item">
+                      <a href="#">Live</a>
+                    </li>
+
+                    <li className="navbar__items__list__item">
+                      <a href="#">Push</a>
+                    </li>
+
+                    <li className="navbar__items__list__item">
+                      <a href="#">Note</a>
+                    </li>
+
+                    <li className="navbar__items__list__item">
+                      <a href="#">Link</a>
+                    </li>
+
+                    <li className="navbar__items__list__item">
+                      <a href="#">Shop</a>
+                    </li>
+
+                    <li className="navbar__items__list__item">
+                      <a href="#">Packs</a>
+                    </li>
+
+                    <li className="navbar__items__list__item">
+                      <a href="#">Help</a>
+                    </li>
+
+                    <li className="navbar__items__list__item__try">
+                      <a href="#">Try live for free</a>
+                    </li>
+
+                    <li className="navbar__items__list__item__login">
+                      <a href="#">Log in or register</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
+          </li>
         </div>
       </div>
     </div>

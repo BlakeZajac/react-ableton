@@ -1,0 +1,46 @@
+@import "../../App.scss";
+
+.hero {
+  &__image {
+    position: absolute;
+    z-index: -1;
+
+    img {
+      width: 80vw;
+      height: 600px;
+      object-fit: cover;
+
+      @media all and (max-width: $breakpoint-tablet) {
+        width: 90vw;
+        height: 500px;
+      }
+
+      @media all and (max-width: $breakpoint-mobile) {
+        height: 400px;
+      }
+    }
+  }
+
+  &__title {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      height: 500px;
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+      height: 400px;
+    }
+
+    h1 {
+      font-size: 6rem;
+
+      @media all and (max-width: $breakpoint-tablet-sm) {
+        font-size: 4rem;
+      }
+    }
+  }
+}
