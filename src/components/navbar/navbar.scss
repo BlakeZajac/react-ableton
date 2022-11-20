@@ -1,0 +1,30 @@
+@import "../../app.scss";
+
+.navbar {
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+
+    &__list {
+      list-style-type: none;
+      display: flex;
+      margin-block-start: 0;
+      margin-block-end: 0;
+
+      &__item {
+        a {
+          font-family: $font-book;
+        }
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.navbar__items__list__item__more__submenu {
+  display: none;
+}

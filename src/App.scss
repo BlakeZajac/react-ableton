@@ -1,0 +1,105 @@
+// Breakpoints
+$breakpoint-desktop-up: 981px;
+$breakpoint-tablet: 980px;
+$breakpoint-tablet-sm-up: 768px;
+$breakpoint-tablet-sm: 767px;
+$breakpoint-mobile-sm-up: 480px;
+$breakpoint-mobile: 479px;
+
+// Colors
+$color-yellow: #fbffa7;
+$color-light-blue: #b1c5ff;
+$color-green: #b6ffc0;
+$color-orange: #ff764d;
+$color-purple: #d5b3ff;
+$color-blue: #0000ff;
+$color-black: #000;
+$color-white: #fff;
+
+// Helpers for color
+.color-yellow {
+  color: $color-yellow;
+}
+.color-light-blue {
+  color: $color-light-blue;
+}
+.color-green {
+  color: $color-green;
+}
+.color-orange {
+  color: $color-orange;
+}
+.color-purple {
+  color: $color-purple;
+}
+.color-blue {
+  color: $color-blue;
+}
+
+// Font and typography
+@font-face {
+  font-family: "FuturaPtLight";
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/futura/FuturaPTLight.otf");
+}
+@font-face {
+  font-family: "FuturaPtBook";
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/futura/FuturaPTBook.otf");
+}
+@font-face {
+  font-family: "FuturaPtMedium";
+  font-style: normal;
+  font-display: swap;
+  src: url("./assets/fonts/futura/FuturaPTMedium.otf");
+}
+
+// Helpers for fonts
+$font-light: "FuturaPtLight";
+$font-book: "FuturaPtBook";
+$font-medium: "FuturaPtMedium";
+
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+body {
+  margin: 0;
+  font-family: $font-light, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+strong {
+  font-family: $font-medium;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.row {
+  padding: 1rem 0;
+  width: 80%;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media all and (max-width: $breakpoint-tablet) {
+    width: 90%;
+  }
+}
