@@ -1,0 +1,111 @@
+@import "../../App.scss";
+
+.cta {
+  padding-bottom: 6rem !important;
+
+  &__container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0 8rem;
+    background-color: $color-light-blue;
+    padding: 0 !important;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+    }
+
+    &:hover {
+      background-color: rgba(177, 197, 255, 0.75);
+      transition: all 0.1s ease-in-out;
+
+      .cta__image img {
+        transform: scale(1);
+        transition: all 0.2s ease-in-out;
+      }
+
+      .cta__content a {
+        opacity: 0.5;
+
+        &::after {
+          padding-left: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__image {
+    flex: 1;
+    margin-bottom: -1rem;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      min-height: 600px;
+      max-height: 100%;
+      object-fit: cover;
+      transform: scale(1.1);
+      transition: all 0.2s ease-in-out;
+
+      @media all and (max-width: $breakpoint-tablet) {
+        width: 90vw;
+        max-height: 350px;
+        min-height: 350px;
+        object-fit: cover;
+      }
+
+      @media all and (max-width: $breakpoint-tablet-sm) {
+        max-height: 250px;
+        min-height: 250px;
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding-right: 8rem;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      padding: 4rem;
+    }
+
+    @media all and (max-width: $breakpoint-tablet-sm) {
+      padding: 2.5rem;
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+      padding: 2rem;
+    }
+
+    p {
+      font-family: $font-medium;
+      font-size: 2rem;
+
+      @media all and (max-width: $breakpoint-tablet-sm) {
+        font-size: 1.5rem;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 3rem;
+
+        @media all and (max-width: $breakpoint-tablet-sm) {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+
+    a {
+      color: $color-blue;
+      transition: all 0.1s ease-in-out;
+
+      &::after {
+        padding-left: 1rem;
+        content: "›";
+        transition: all 0.1s ease-in-out;
+      }
+    }
+  }
+}

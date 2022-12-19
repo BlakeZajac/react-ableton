@@ -222,7 +222,7 @@
     }
 
     &__menu {
-      background: $color-blue;
+      background: $color-orange;
       position: absolute;
       width: 90%;
       left: 0;
@@ -230,7 +230,26 @@
       height: 100%;
       z-index: -1;
       padding: 5rem 5% 5%;
-      animation: positionDown 0.5s ease-in-out;
+      animation: positionDown 0.9s cubic-bezier(0.72, 0.01, 0.61, 0.96);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $color-purple;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        animation: positionDown 0.9s cubic-bezier(0.72, 0.01, 0.61, 0.96) 0.1s;
+      }
+
+      &::after {
+        background: $color-blue;
+        animation: positionDown 0.9s cubic-bezier(0.72, 0.01, 0.61, 0.96) 0.2s;
+      }
     }
   }
 }
@@ -248,9 +267,11 @@
 @keyframes positionDown {
   from {
     transform: translateY(-100%);
+    // opacity: 0;
   }
 
   to {
     transform: translateY(0);
+    // opacity: 1;
   }
 }

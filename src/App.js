@@ -5,8 +5,8 @@ import imageThree from "./assets/images/photo-3.jpg";
 import imageFour from "./assets/images/photo-4.jpg";
 import imageFive from "./assets/images/photo-5.jpg";
 import imageSix from "./assets/images/poster-meet-the-makers.jpg";
-import { Content, Hero, Navbar } from "./components/index";
-import { Images, MediaWithText } from "./containers/index";
+import { Content, Cta, Hero, Navbar } from "./components/index";
+import { Images } from "./containers/index";
 
 const App = () => {
   return (
@@ -65,7 +65,7 @@ const App = () => {
         contentBody="If you're joining us in Berlin, we'll help with relocation and paperwork. We'll even provide you with free German or English lessons. Plus, working in Germany means you can expect comprehensive health insurance for you and your family, as well as generous maternity and paternity leave. Office hours are flexible, but it's not all work; we have several company and team outings throughout the year as well as a variety of fun, informal small-group activities."
       />
 
-      <MediaWithText />
+      <Cta />
     </div>
   );
 };
