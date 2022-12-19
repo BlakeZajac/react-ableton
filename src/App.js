@@ -5,7 +5,7 @@ import imageThree from "./assets/images/photo-3.jpg";
 import imageFour from "./assets/images/photo-4.jpg";
 import imageFive from "./assets/images/photo-5.jpg";
 import imageSix from "./assets/images/poster-meet-the-makers.jpg";
-import { Content, Cta, Hero, Navbar } from "./components/index";
+import { Content, Cta, Footer, Hero, Navbar } from "./components/index";
 import { Images } from "./containers/index";
 
 const App = () => {
@@ -66,6 +66,8 @@ const App = () => {
       />
 
       <Cta />
+
+      <Footer />
     </div>
   );
 };
