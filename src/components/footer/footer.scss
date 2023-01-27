@@ -2,9 +2,82 @@
 
 .footer {
   &__logo {
+    padding-bottom: 3rem;
+
     img {
       width: 122px;
       height: auto;
+    }
+  }
+
+  &__items {
+    display: flex;
+
+    &__col {
+      width: 33.33%;
+    }
+
+    &__list {
+      padding: 0;
+      list-style-type: none;
+
+      &__item {
+        a {
+          background-image: linear-gradient(currentColor, currentColor);
+          background-position-x: 100%;
+          background-position-y: 0%;
+          background-size: 0% 0.05em;
+
+          &:hover {
+            background-size: 100% 0.05em;
+          }
+        }
+      }
+    }
+
+    &__social {
+      &.facebook {
+      }
+
+      &.twitter {
+      }
+
+      &.youtube {
+      }
+
+      &.instagram {
+      }
+    }
+
+    &__heading {
+    }
+
+    &__newsletter-content {
+    }
+
+    &__newsletter {
+      &__input {
+        &.button {
+        }
+      }
+    }
+  }
+
+  &__socket {
+    &__item {
+    }
+
+    &__list {
+      &__item {
+      }
+    }
+
+    &__credit {
+      &__logo {
+      }
+
+      &__content {
+      }
     }
   }
 }

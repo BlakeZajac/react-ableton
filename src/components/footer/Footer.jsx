@@ -132,8 +132,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer_socket row">
-        <ul className="footer__socket__item">
+      <div className="footer__socket row">
+        <ul className="footer__socket__list">
           <li className="footer__socket__list__item">
             <a href="#">Contact us</a>
           </li>
