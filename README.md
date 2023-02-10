@@ -5,5 +5,5 @@ Ableton creates unique software and hardware for music creation and performance.
 
 ## Learn more
 
-View the front end: [Ableton About Page](#)
+View the front end: [Ableton About Page](https://react-ableton.vercel.app/)
 Visit my website: [blakezajac.com](https://www.blakezajac.com/)
