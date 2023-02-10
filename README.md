@@ -7,3 +7,7 @@
 
 - View the front end: [Ableton About Page](https://react-ableton.vercel.app/)
 - Visit my website: [blakezajac.com](https://www.blakezajac.com/)
+
+## To do:
+
+- Implement react-animate-on-scroll
