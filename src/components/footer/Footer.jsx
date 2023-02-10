@@ -121,10 +121,6 @@ const Footer = () => {
               </li>
 
               <li className="footer__items__list__item">
-                <a href="#">Find Distributors</a>
-              </li>
-
-              <li className="footer__items__list__item">
                 <a href="#">Try Push in-store</a>
               </li>
             </ul>

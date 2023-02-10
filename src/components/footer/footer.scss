@@ -1,5 +1,44 @@
 @import "../../App.scss";
 
+%input {
+  padding: 8px 16px;
+  width: 100%;
+  min-height: 40px;
+
+  background-color: $color-white;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  box-shadow: var(--shadow-xs);
+
+  font-family: $font-book;
+  font-size: 0.9375rem;
+  font-weight: normal;
+
+  transition: all 0.1s ease-in-out;
+
+  &::placeholder {
+    font-size: 0.9375rem;
+    color: $color-black;
+    opacity: 0.5;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+    transition: all 0.1s ease-in-out;
+  }
+
+  &:focus {
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #f2f4f7;
+    transition: all 0.1s ease-in-out;
+
+    &::placeholder {
+      opacity: 1;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+}
+
 .footer {
   &__logo {
     padding-bottom: 3rem;
@@ -11,10 +50,30 @@
   }
 
   &__items {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    row-gap: 5rem;
+    padding-bottom: 5rem;
+
+    @media all and (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+
+    @media all and (max-width: $breakpoint-mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
 
     &__col {
-      width: 33.33%;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 2%;
+      }
+    }
+
+    &__heading {
+      padding-bottom: 0.75rem;
+      font-size: 1.125rem;
     }
 
     &__list {
@@ -22,61 +81,160 @@
       list-style-type: none;
 
       &__item {
+        margin: 0.5rem 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
         a {
           background-image: linear-gradient(currentColor, currentColor);
-          background-position-x: 100%;
-          background-position-y: 0%;
+          background-position-x: 0%;
+          background-position-y: 100%;
           background-size: 0% 0.05em;
+          background-repeat: no-repeat;
+          font-size: 1.0625rem;
+          transition: all 0.3s ease-in-out;
 
           &:hover {
             background-size: 100% 0.05em;
+            transition: all 0.3s ease-in-out;
           }
         }
       }
     }
 
     &__social {
-      &.facebook {
-      }
+      display: flex;
+      gap: 0.25rem;
+      padding: 1rem 0 0;
+      list-style-type: none;
 
-      &.twitter {
-      }
+      &__item {
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      &.youtube {
-      }
+        &:hover {
+          background-image: linear-gradient(rgb(0 0 0 / 10%) 0 0);
+        }
 
-      &.instagram {
-      }
-    }
+        a {
+          width: 2.5rem;
+          height: 2.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
 
-    &__heading {
+        svg {
+          width: 1.25rem;
+          height: 1.25rem;
+          fill: #fff;
+        }
+
+        &.facebook {
+          background-color: #3477f2;
+        }
+
+        &.twitter {
+          background-color: #1da1f2;
+        }
+
+        &.youtube {
+          background-color: #ff001d;
+        }
+
+        &.instagram {
+          background-color: #f77737;
+        }
+      }
     }
 
     &__newsletter-content {
+      padding-bottom: 1.5rem;
+      font-size: 1.0625rem;
     }
 
     &__newsletter {
+      display: flex;
+
       &__input {
+        @extend %input;
+        border-radius: 8px 0 0 8px;
+
         &.button {
+          width: 120px;
+          cursor: pointer;
+          background-color: $color-blue;
+          border: none;
+          border-radius: 0 8px 8px 0;
+          color: #fff;
+
+          &:hover {
+            background-image: linear-gradient(rgb(0 0 0 / 15%) 0 0);
+          }
         }
       }
     }
   }
 
   &__socket {
-    &__item {
+    padding-top: 4rem !important;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    @media all and (max-width: $breakpoint-tablet-sm) {
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      list-style-type: none;
+      padding: 0;
+
       &__item {
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position-x: 0%;
+        background-position-y: 100%;
+        background-size: 0% 0.05em;
+        background-repeat: no-repeat;
+        font-size: 0.875rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-size: 100% 0.05em;
+          transition: all 0.3s ease-in-out;
+        }
       }
     }
 
     &__credit {
+      position: relative;
+      top: -2px;
+      display: flex;
+      gap: 1rem;
+      flex-direction: row-reverse;
+      align-items: center;
+
       &__logo {
       }
 
       &__content {
+        p {
+          font-size: 0.875rem;
+        }
       }
     }
   }

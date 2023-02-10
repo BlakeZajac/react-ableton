@@ -195,6 +195,19 @@
       .navbar__items__list {
         display: block;
 
+        &__item {
+          animation: fade-in 0.4s cubic-bezier(0.42, 0.97, 0.52, 1.49) forwards;
+          position: relative;
+          top: 5px;
+          opacity: 0;
+
+          @for $i from 1 to 20 {
+            &:nth-child(#{$i}) {
+              animation-delay: $i * 0.1s;
+            }
+          }
+        }
+
         &__item,
         &__item__try,
         &__item__login {
@@ -230,7 +243,7 @@
       height: 100%;
       z-index: -1;
       padding: 5rem 5% 5%;
-      animation: positionDown 0.9s cubic-bezier(0.72, 0.01, 0.61, 0.96);
+      animation: positionDown 0.75s cubic-bezier(0.72, 0.01, 0.61, 0.96);
 
       &::before,
       &::after {
@@ -243,12 +256,12 @@
         top: 0;
         left: 0;
         z-index: -1;
-        animation: positionDown 0.9s cubic-bezier(0.72, 0.01, 0.61, 0.96) 0.1s;
+        animation: positionDown 0.75s cubic-bezier(0.72, 0.01, 0.61, 0.96) 0.1s;
       }
 
       &::after {
         background: $color-blue;
-        animation: positionDown 0.9s cubic-bezier(0.72, 0.01, 0.61, 0.96) 0.2s;
+        animation: positionDown 0.75s cubic-bezier(0.72, 0.01, 0.61, 0.96) 0.2s;
       }
     }
   }
@@ -273,5 +286,17 @@
   to {
     transform: translateY(0);
     // opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    top: 5px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
   }
 }
